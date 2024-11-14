@@ -1,12 +1,29 @@
 #!/bin/bash
 
-source /grid/fermiapp/products/uboone/setup_uboone.sh
+source /cvmfs/uboone.opensciencegrid.org/products/setup_uboone.sh
 echo "Setting up uboonecode"
-setup uboonecode v07_13_00 -q e17:prof
+setup uboonecode v10_00_00 -q e26:prof
 #setup uboonecode v07_05_00_02 -q e17:prof
 echo "Setting up larsoftobj"
-setup larsoftobj v07_08_00 -q e17:prof
-source /exp/uboone/app/users/cadams/pystack2/setup.sh
+setup larsoftobj v10_00_00 -q e26:prof
+
+#setup python v2_7_14b
+
+#setup python v3_9_2
+echo `which python`
+
+EVD_DIR="/exp/uboone/app/users/cerati/UBEVD-MCC10/UBEVD/"
+
+# Python extras
+PYLIBS="/exp/uboone/app/users/cerati/UBEVD-MCC10/site-packages"
+
+export LD_LIBRARY_PATH=${EVD_DIR}/lib:${LD_LIBRARY_PATH}
+export PATH=${EVD_DIR}/bin:${PATH}
+export PATH=${EVD_DIR}/..:${PATH}
+export PYTHONPATH=${PYLIBS}:${ROOTSYS}/lib:${PYTHONPATH}
+
+
+#source /exp/uboone/app/users/cadams/pystack2/setup.sh
 
 # # clean up previously set env
 # me="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"

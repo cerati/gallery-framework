@@ -25,9 +25,12 @@ typedef _object PyObject;
 
 
 
-#ifndef __CINT__
-#include "Python.h"
-#include "numpy/arrayobject.h"
+#ifndef ROOT_TMVA_PyMethodBase
+  #ifndef __CINT__
+    #include "Python.h"
+    #define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+    #include "numpy/arrayobject.h"
+  #endif
 #endif
 
 
