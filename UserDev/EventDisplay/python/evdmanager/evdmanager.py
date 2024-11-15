@@ -134,7 +134,7 @@ class evd_manager_base(manager, QtCore.QObject):
         # what data products are available
 
         # Open the file
-        f = TFile(file)
+        f = TFile.Open(file)
         # Use the larlite_id_tree to find out how many entries are in the file:
         e=f.Get("Events")
 
@@ -233,7 +233,7 @@ class evd_manager_base(manager, QtCore.QObject):
 
         # Have to figure out number of events available
         for _f in _file_list:
-            _rf = ROOT.TFile(_f)
+            _rf = ROOT.TFile.Open(_f.data())
             _tree = _rf.Get("Events")
             self._n_entries += _tree.GetEntries()
 
