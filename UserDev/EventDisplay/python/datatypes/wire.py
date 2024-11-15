@@ -1,4 +1,4 @@
-from database import dataBase
+from .database import dataBase
 from ROOT import evd
 import pyqtgraph as pg
 
@@ -24,7 +24,7 @@ class recoWire(wire):
         self._process.setInput(self._producerName)
         for plane in xrange(geom.nViews()):
             self._process.setYDimension(geom.readoutWindowSize(),plane)
-            print geom.readoutPadding()
+            print(geom.readoutPadding())
             if geom.readoutPadding() != 0:
                 self._process.setPadding(geom.readoutPadding(), plane)
 

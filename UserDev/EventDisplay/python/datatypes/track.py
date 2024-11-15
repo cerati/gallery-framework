@@ -1,4 +1,4 @@
-from database import recoBase
+from .database import recoBase
 from pyqtgraph.Qt import QtGui, QtCore
 from ROOT import evd
 import pyqtgraph as pg
@@ -64,7 +64,7 @@ class track(recoBase):
                 self._drawnObjects[view.plane()].append(thisPoly)
 
 
-from database import recoBase3D
+from .database import recoBase3D
 
 try:
     import pyqtgraph.opengl as gl
@@ -130,6 +130,6 @@ try:
 
     
 
-except Exception, e:
+except(Exception):
     pass
 

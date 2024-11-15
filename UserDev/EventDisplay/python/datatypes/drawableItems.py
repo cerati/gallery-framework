@@ -1,22 +1,22 @@
-import hit
+from .hit import hit
 # import match
-import shower
-import track
-import wire
-import cluster
-import endpoint2d
-import vertex
-import mctrack
-import mcshower
-import spacepoint
-import simch
-import opflash
-import seed
-import pfpart
+from .shower import shower
+from .track import track
+from .wire import wire
+from .cluster import cluster
+#from .endpoint2d import endpoint2d
+from .vertex import vertex
+from .mctrack import mctrack
+#from .mcshower import mcshower
+from .spacepoint import spacepoint
+#from .simch import simch
+#from .opflash import opflash
+#from .seed import seed
+#from .pfpart import pfpart
 #import neutrino
-import numuselection
-import cosmictag
-import t0
+#from .numuselection import numuselection
+from .cosmictag import cosmictag
+from .t0 import t0
 
 # This is the class that maintains the list of drawable items.
 # If your class isn't here, it can't be drawn

@@ -1,11 +1,11 @@
-from database import recoBase
+from .database import recoBase
 from ROOT import evd, TVector3
 import pyqtgraph as pg
 from pyqtgraph.Qt import QtGui, QtCore
 import math as mt
 from ROOT import larutil
 
-from database import recoBase3D
+from .database import recoBase3D
 
 try:
     import pyqtgraph.opengl as gl
@@ -76,5 +76,5 @@ try:
                 self._drawnObjects.append(flash)
 
 
-except Exception, e:
+except(Exception):
     pass

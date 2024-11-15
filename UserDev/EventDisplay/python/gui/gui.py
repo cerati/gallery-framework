@@ -10,7 +10,7 @@ import numpy as np
 import evdmanager
 
 # Import the class that manages the view windows
-from viewport import viewport
+from .viewport import viewport
 
 
 class view_manager(QtCore.QObject):

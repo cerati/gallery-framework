@@ -1,10 +1,10 @@
-from database import recoBase
+from .database import recoBase
 from ROOT import evd, TVector3
 import pyqtgraph as pg
 from pyqtgraph.Qt import QtGui, QtCore
 import math as mt
 
-from database import recoBase3D
+from .database import recoBase3D
 
 try:
     import pyqtgraph.opengl as gl
@@ -45,5 +45,5 @@ try:
             self._drawnObjects.append(glPointsCollection)
 
 
-except Exception, e:
+except(Exception):
     pass

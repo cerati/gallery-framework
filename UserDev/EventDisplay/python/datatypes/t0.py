@@ -1,4 +1,4 @@
-from database import recoBase
+from .database import recoBase
 from pyqtgraph.Qt import QtGui, QtCore
 from ROOT import evd
 import pyqtgraph as pg
@@ -65,7 +65,7 @@ class t0(recoBase):
                 self._drawnObjects[view.plane()].append(thisPoly)
 
 
-from database import recoBase3D
+from .database import recoBase3D
 
 try:
     import pyqtgraph.opengl as gl
@@ -101,7 +101,7 @@ try:
             geom = view_manager._geometry
             view = view_manager.getView()
 
-            print 't0 ------------------------------------------------'
+            print('t0 ------------------------------------------------')
             
             self
             tracks = self._process.getData()
@@ -126,7 +126,7 @@ try:
 
                 pts = np.vstack([x,y,z]).transpose()
                 pen = pg.mkPen((255,255,0), width=2) # Track Color
-                print trkctr , " ----------------------------------- "
+                print(trkctr , " ----------------------------------- ")
                 line = gl.GLLinePlotItem(pos=pts,color=self._trackColors[ trkctr % len(self._trackColors) ], width=4)
                 view.addItem(line)
                 self._drawnObjects.append(line)
@@ -135,6 +135,6 @@ try:
 
     
 
-except Exception, e:
+except(Exception):
     pass
 

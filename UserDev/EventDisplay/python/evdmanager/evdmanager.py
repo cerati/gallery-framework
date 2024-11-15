@@ -1,5 +1,5 @@
 from pyqtgraph.Qt import QtCore
-from event import manager, event
+from .event import manager, event
 import datatypes
 from ROOT import gallery
 import os

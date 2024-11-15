@@ -1,4 +1,4 @@
-from database import recoBase
+from .database import recoBase
 from pyqtgraph.Qt import QtGui, QtCore
 from ROOT import evd
 import pyqtgraph as pg
@@ -65,7 +65,7 @@ class cosmictag(recoBase):
                 self._drawnObjects[view.plane()].append(thisPoly)
 
 
-from database import recoBase3D
+from .database import recoBase3D
 
 try:
     import pyqtgraph.opengl as gl
@@ -100,7 +100,7 @@ try:
             geom = view_manager._geometry
             view = view_manager.getView()
 
-            print 'cosmictag -------------------------------------------'
+            print('cosmictag -------------------------------------------')
 
             self
             tracks = self._process.getData()
@@ -133,6 +133,6 @@ try:
 
     
 
-except Exception, e:
+except(Exception):
     pass
 

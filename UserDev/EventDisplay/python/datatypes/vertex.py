@@ -1,4 +1,4 @@
-from database import recoBase
+from .database import recoBase
 from ROOT import evd
 from pyqtgraph.Qt import QtGui
 import pyqtgraph as pg
@@ -57,7 +57,7 @@ class vertex(recoBase):
                 view._view.addItem(r)
 
 
-from database import recoBase3D
+from .database import recoBase3D
 
 try:
     import pyqtgraph.opengl as gl
@@ -122,5 +122,5 @@ try:
                 self._drawnObjects.append(yglline)
                 self._drawnObjects.append(zglline)
 
-except Exception, e:
+except(Exception):
     pass

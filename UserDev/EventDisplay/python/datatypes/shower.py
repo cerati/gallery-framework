@@ -1,9 +1,9 @@
-from database import recoBase
+from .database import recoBase
 from ROOT import evd, TVector3
 import pyqtgraph as pg
 from pyqtgraph.Qt import QtGui, QtCore
 import math as mt
-from connectedObjects import boxCollection
+from .connectedObjects import boxCollection
 
 # add shower polygon Qt object
 class shower_polygon(QtGui.QGraphicsPolygonItem):
@@ -53,7 +53,7 @@ class shower_polygon(QtGui.QGraphicsPolygonItem):
             tip += 'Energy %i MeV \n'%(int(self._energy))
         if (self._dedx != None):
             tip += 'dE/dx %.01f MeV/cm'%(self._dedx)
-        print tip
+        print(tip)
         return tip
 
 # Shower drawing is currently "experimental"
@@ -216,7 +216,7 @@ class shower(recoBase):
         self._drawnObjects = []
 
 
-from database import recoBase3D
+from .database import recoBase3D
 
 try:
     import pyqtgraph.opengl as gl
@@ -322,6 +322,5 @@ try:
 
                 i_color += 1
 
-
-except Exception, e:
+except(Exception):
     pass
