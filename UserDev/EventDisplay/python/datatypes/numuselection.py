@@ -1,10 +1,10 @@
-from database import recoBase
+from .database import recoBase
 from ROOT import evd, TVector3
 from pyqtgraph.Qt import QtGui, QtCore
 import pyqtgraph as pg
 import math as mt
-from track import polyLine
-from shower import shower_polygon
+from .track import polyLine
+from .shower import shower_polygon
 
 class numuselection(recoBase):
     """docstring for numuselection"""
@@ -44,7 +44,7 @@ class numuselection(recoBase):
 
                 # draw the slice hits
                 slice_hit_v =  numus[i].slicehits();
-                print 'there are %i hits for the full slice'%(len(slice_hit_v))
+                print('there are %i hits for the full slice'%(len(slice_hit_v)))
                 for ih in range(len(slice_hit_v)):
                     hit = slice_hit_v[ih]
                     r = QtGui.QGraphicsRectItem(hit.wire(), 
@@ -62,7 +62,7 @@ class numuselection(recoBase):
                 # draw the hits
                 hits_v = numus[i].hits();
                 for ic, hits in enumerate(hits_v):
-                    print 'there are %i hits on plane %i'%(len(hits),thisPlane)
+                    print('there are %i hits on plane %i'%(len(hits),thisPlane))
                     for ih in range(len(hits)):
                         hit = hits[ih]
                         #print '\t [w,t] -> [%.0f,%.0f]'%(hit.wire(),hit.time())

@@ -14,7 +14,7 @@ from .spacepoint import spacepoint
 #from .seed import seed
 #from .pfpart import pfpart
 #import neutrino
-#from .numuselection import numuselection
+from .numuselection import numuselection
 from .cosmictag import cosmictag
 from .t0 import t0
 
@@ -43,7 +43,7 @@ class drawableItems(object):
         self._drawableClasses.update({'Vertex': [vertex,"recob::Vertex"]})
         self._drawableClasses.update({'SPS': [spacepoint,"recob::SpacePoint"]})
         #self._drawableClasses.update({'Numu Selection': [numuselection.numuselection, "recob::Trackrecob::Vertexvoidart::Assn"]})
-        #self._drawableClasses.update({'Neutrino Slice': [numuselection, "recob::PFParticle"]})
+        self._drawableClasses.update({'Neutrino Slice': [numuselection, "recob::PFParticle"]})
         self._drawableClasses.update({'Cosmic Tag': [cosmictag, "anab::CosmicTag"]})
         self._drawableClasses.update({'T0 Tag': [t0, "anab::T0"]})
 
