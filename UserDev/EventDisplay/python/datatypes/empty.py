@@ -79,7 +79,7 @@ class empty(recoBase):
                 thisPlane) / view_manager._geometry.time2cm()
 
             # Loop over the data in this plane:
-            for i in xrange(len(_this_data)):
+            for i in range(len(_this_data)):
                 thisPoint = _this_data[i]
 
                 # Need to scale back into wire time coordinates:
@@ -165,7 +165,7 @@ try:
             collection = self._process.getData()
             i_color = 0
 
-            for i in xrange(len(collection)):
+            for i in range(len(collection)):
                 # Do something here to add the item to the plot
                 
                 # It has to be some sort of GLItem or inherited class.

@@ -29,7 +29,7 @@ try:
             seeds = self._process.getData()
 
             # Each flash is drawn as an oval in Y/Z/X
-            for i in xrange(len(seeds)):
+            for i in range(len(seeds)):
                 thisSeed = seeds[i]
 
                 # Each seed just needs two points, the start and end point

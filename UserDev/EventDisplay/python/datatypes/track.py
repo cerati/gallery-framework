@@ -18,7 +18,7 @@ class polyLine(QtGui.QGraphicsPathItem):
 
         # Fill the path:
         path.moveTo(points[0])
-        for i in xrange(len(points)-1):
+        for i in range(len(points)-1):
             path.lineTo(points[i+1])
         self.setPath(path)
 
@@ -41,7 +41,7 @@ class track(recoBase):
             tracks = self._process.getDataByPlane(view.plane())
             offset = geom.offset(view.plane()) / geom.time2cm()
 
-            for i in xrange(len(tracks)):
+            for i in range(len(tracks)):
                 track = tracks[i]
                 # construct a polygon for this track:
                 points = []

@@ -25,7 +25,7 @@ class hit(recoBase):
             # First get the hit information:
             hits = self._process.getDataByPlane(thisPlane)
 
-            for i in xrange(len(hits)):
+            for i in range(len(hits)):
                 hit = hits[i]
                 # Draws a rectangle at (x,y,xlength, ylength)
                 r = QtGui.QGraphicsRectItem(

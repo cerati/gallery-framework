@@ -40,12 +40,12 @@ class numuselection(recoBase):
             # First get the hit information:
             numus = self._process.getDataByPlane(thisPlane)
 
-            for i in xrange(len(numus)):
+            for i in range(len(numus)):
 
                 # draw the slice hits
                 slice_hit_v =  numus[i].slicehits();
                 print 'there are %i hits for the full slice'%(len(slice_hit_v))
-                for ih in xrange(len(slice_hit_v)):
+                for ih in range(len(slice_hit_v)):
                     hit = slice_hit_v[ih]
                     r = QtGui.QGraphicsRectItem(hit.wire(), 
                                                 hit.time() + geom.timeOffsetTicks(view.plane()),
@@ -63,7 +63,7 @@ class numuselection(recoBase):
                 hits_v = numus[i].hits();
                 for ic, hits in enumerate(hits_v):
                     print 'there are %i hits on plane %i'%(len(hits),thisPlane)
-                    for ih in xrange(len(hits)):
+                    for ih in range(len(hits)):
                         hit = hits[ih]
                         #print '\t [w,t] -> [%.0f,%.0f]'%(hit.wire(),hit.time())
                         # Draws a rectangle at (x,y,xlength, ylength)
@@ -105,7 +105,7 @@ class numuselection(recoBase):
 
                 # Draw all the tracks:
                 tracks = numus[i].tracks()
-                for j in xrange(len(numus[i].tracks())):
+                for j in range(len(numus[i].tracks())):
                     track = tracks[j]
                     # construct a polygon for this track:
                     points = []
@@ -137,7 +137,7 @@ class numuselection(recoBase):
 
                 i_color = 0
 
-                for i in xrange(len(showers)):
+                for i in range(len(showers)):
                 
                     shower = showers[i]
 

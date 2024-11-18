@@ -109,7 +109,7 @@ class shower(recoBase):
 
             i_color = 0
 
-            for i in xrange(len(showers)):
+            for i in range(len(showers)):
                 
                 shower = showers[i]
 
@@ -263,7 +263,7 @@ try:
             showers = self._process.getData()
             i_color = 0
 
-            for i in xrange(len(showers)):
+            for i in range(len(showers)):
                 shower = showers[i]
 
                 if i_color >= len(self._showerColors):

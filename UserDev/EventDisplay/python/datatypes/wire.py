@@ -22,7 +22,7 @@ class recoWire(wire):
         self._process = evd.DrawWire()
         self._process.initialize()
         self._process.setInput(self._producerName)
-        for plane in xrange(geom.nViews()):
+        for plane in range(geom.nViews()):
             self._process.setYDimension(geom.readoutWindowSize(),plane)
             print(geom.readoutPadding())
             if geom.readoutPadding() != 0:
@@ -39,14 +39,14 @@ class rawDigit(wire):
     def __init__(self, geom):
         super(rawDigit, self).__init__()
         self._process = evd.DrawRawDigit()
-        for i in xrange(len(geom._pedestals)):
+        for i in range(len(geom._pedestals)):
             self._process.setPedestal(geom._pedestals[i], i)
         self._process.initialize()
         if "boone" in geom.name():
             self._process.SetCorrectData(False)
         else:
             self._process.SetCorrectData(False)
-        for plane in xrange(geom.nViews()):
+        for plane in range(geom.nViews()):
             self._process.setYDimension(geom.readoutWindowSize(),plane)
             if geom.readoutPadding() != 0:
                 self._process.setPadding(geom.readoutPadding(), plane)

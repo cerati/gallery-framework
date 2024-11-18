@@ -49,14 +49,14 @@ try:
             i_color = 0
 
             # Each flash is drawn as an oval in Y/Z/X
-            for i in xrange(len(parts)):
+            for i in range(len(parts)):
                 thisPart = parts[i]
 
                 # Get the points from the particles and draw them, color coded
                 spacepoints = thisPart.points()
                 points = np.ndarray((spacepoints.size(), 3))
 
-                for i in xrange(spacepoints.size()):
+                for i in range(spacepoints.size()):
                     thisPoint = spacepoints[i]
 
                     points[i][0] = thisPoint.X()

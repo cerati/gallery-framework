@@ -32,7 +32,7 @@ class spacepoint(recoBase):
             offset = view_manager._geometry.offset(
                 thisPlane) / view_manager._geometry.time2cm()
 
-            for i in xrange(len(spts)):
+            for i in range(len(spts)):
                 thisPoint = spts[i]
 
                 # Need to scale back into wire time coordinates:
@@ -77,7 +77,7 @@ try:
             # Make a collection to add the points to:
             points = np.ndarray((spts.size(), 3))
 
-            for i in xrange(len(spts)):
+            for i in range(len(spts)):
                 thisPoint = spts[i]
 
                 points[i][0] = thisPoint.X()

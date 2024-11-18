@@ -24,7 +24,7 @@ class vertex(recoBase):
             # First get the vertex information:
             vertexes = self._process.getDataByPlane(thisPlane)
 
-            for i in xrange(len(vertexes)):
+            for i in range(len(vertexes)):
                 point = vertexes[i]
                 # Draws a circle at (x,y,radius = 0.5cm)
                 radBigW = 0.5 / view_manager._geometry.wire2cm()
@@ -80,7 +80,7 @@ try:
 
             vertexes = self._process.getData()
 
-            for i in xrange(len(vertexes)):
+            for i in range(len(vertexes)):
                 vertex = vertexes[i]
 
                 # Stupid thing right now:

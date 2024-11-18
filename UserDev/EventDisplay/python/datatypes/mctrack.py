@@ -23,7 +23,7 @@ class mctrack(recoBase):
             tracks = self._process.getDataByPlane(view.plane())
             offset = geom.offset(view.plane()) / geom.time2cm()
 
-            for i in xrange(len(tracks)):
+            for i in range(len(tracks)):
                 track = tracks[i]
                 # construct a polygon for this track:
                 points = []

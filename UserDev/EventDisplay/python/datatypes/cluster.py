@@ -49,7 +49,7 @@ class cluster(recoBase):
 
             clusters = self._process.getDataByPlane(thisPlane)
 
-            for i in xrange(len(clusters)):
+            for i in range(len(clusters)):
                 cluster = clusters[i]
                 # Now make the cluster
                 cluster_box_coll = boxCollection()

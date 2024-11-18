@@ -38,7 +38,7 @@ try:
             i_color = 0
 
             # Each flash is drawn as an oval in Y/Z/X
-            for i in xrange(len(flashes)):
+            for i in range(len(flashes)):
                 thisFlash = flashes[i]
 
                 # Figure out what color this flash should be drawn as
