@@ -27,11 +27,13 @@ class shower_polygon(QtGui.QGraphicsPolygonItem):
         self._larliteshower = shower
 
     def hoverEnterEvent(self, e):
-        self.setToolTip(self._ownerToolTip())
-        self._ownerHoverEnter(e)
+        self.setToolTip(self._ownerToolTip)
+        if self._ownerHoverEnter != None:
+            self._ownerHoverEnter(e)
 
     def hoverLeaveEvent(self, e):
-        self._ownerHoverExit(e)
+        if self._ownerHoverExit != None:
+            self._ownerHoverExit(e)
 
     #def connectToggleHighlight(self, ownerTH):
     #    self._toggleHighlight = ownerTH
